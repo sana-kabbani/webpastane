@@ -15,7 +15,7 @@
 
                 <div class="banner-shop">
                     <a href="#" class="banner-link">
-                        <figure><img src="{{  ('assets/images/shop-banner.jpg')}}" alt=""></figure>
+                        <figure><img src="{{  ('assets/images/bizim/slider1.jpeg')}}" alt=""></figure>
                     </a>
                 </div>
 
