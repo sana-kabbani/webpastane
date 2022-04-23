@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('prodects', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('slug')->unique();
-            $table->string('shortdescription')->nullable();
+            $table->string('short_description')->nullable();
             $table->text('description');
-            $table->decimal('regular_price')->nullable();
+            $table->decimal('regular_price');
             $table->decimal('sale_price')->nullable();
             $table->string('SKU');
             $table->enum('stock_status',['instock','outofstock']);
@@ -29,7 +29,6 @@ return new class extends Migration
             $table->text('images')->nullable();
             $table->bigInteger('category_id')->unsigned()->nullable();
             $table->timestamps();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 
