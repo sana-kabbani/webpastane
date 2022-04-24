@@ -14,6 +14,7 @@ class DetailesComponent extends Component
     public function render()
     {
         $product = Product::where('slug',$this->slug)->first();
+        
 
         return view('livewire.detailes-component',['product'=>$product])->layout('layouts.base');
     }
