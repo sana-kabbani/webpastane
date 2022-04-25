@@ -16,11 +16,7 @@
                             <div class="col-md-6">
                                  Tüm Ürünler 
                             </div>
-                            <div class="col-md-6">
-                                <a href="{{ route('admin.addcategory') }}" class="btn btn-success pull-right">Add</a>
-                            </div>
-                        </div>
-                    </div>
+                           
                     <div class="panel-body">
                         <table class="table table-striped">
                             <thead>
@@ -29,23 +25,28 @@
                                     <th>Image</th>
                                     <th>Adı</th>
                                     <th>Fiyatı</th>
-                                    <th>kategory</th>
                                     <th>Date</th>
                                     <th>Action</th>
 
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($categories as $category)
+                                @foreach ($products as $product)
                                 <tr>
-                                    <td>{{ $category->id }}</td>
-                                    <td>{{ $category->name }}</td>
-                                    <td>{{ $category->slug }}</td>
+                                    <td>{{ $product->id }}</td>
+                                    <td><img src="{{ asset('assets/images/bizim') }}/{{ $product->image }}" width="60" /></td>
+                                    <td>{{ $product->name }}</td>
+                                    <td>{{ $product->stock_status }}</td>
+                                    <td>{{ $product->regular_price}}</td>
+
+                                    <td>{{ $product->created_at}}</td>
+
+
                                 </tr>
                                 @endforeach
                             </tbody>
                         </table>
-                        {{ $categories->links() }}
+                        {{ $products->links() }}
 
                                     
                             
