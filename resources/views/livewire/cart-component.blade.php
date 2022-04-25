@@ -11,7 +11,7 @@
         <div class=" main-content-area">
 
             <div class="wrap-iten-in-cart">
-                @if ()
+             
                     
                 
                 <h3 class="box-title">Products Name</h3>
@@ -44,9 +44,7 @@
                     </li>
                 @endforeach   												
                 </ul>
-                @else
-                <p> sepetinde hiç bir ürün yok<p>
-                 @endif   
+              
             </div>
 
             <div class="summary">
